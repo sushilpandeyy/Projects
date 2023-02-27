@@ -11,5 +11,7 @@ function S() {
 s3=s2
 s2=s1
 s1=count
+count=0
+Counter.innerText=count
 para.innerText=s1 + " - " + s2 + " - " +s3
 }
