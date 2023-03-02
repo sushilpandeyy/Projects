@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="LP02.css">
+</head>
+<body>
+    <center><h1>Arithmetic Operations</h1></center>
+    <div class="out">
+    <form name = "valuetab">
+        <input id = "calc" type ="text" name = "a" id="display" > <br> <br>  
+    <table>
+        <tr>
+            <td><input class="num" type="button" value="9" onclick="input(9)"></td>
+            <td><input class="num" type="button" value="8" onclick="input(8)"></td>
+            <td><input class="num" type="button" value="7" onclick="input(7)"></td>
+            <td><input class="num" type="button" value="+" onclick="input('+')"></td>
+        </tr>
+        <tr>
+            <td><input class="num" type="button" value="6" onclick="input(6)"></td>
+            <td><input class="num" type="button" value="5" onclick="input(5)"></td>
+            <td><input class="num" type="button" value="4" onclick="input(4)"></td>
+            <td><input class="num" type="button" value="-" onclick="input('-')"></td>
+        </tr>
+        <tr>
+            <td><input class="num" type="button" value="3" onclick="input(3)"></td>
+            <td><input class="num" type="button" value="2" onclick="input(2)"></td>
+            <td><input class="num" type="button" value="1" onclick="input(1)"></td>
+            <td><input class="num" type="button" value="X" onclick="input('*')"></td>
+        </tr>
+        <tr>
+            <td><input class="num" type="button" value="0" onclick="input(0)"></td>
+            <td><input class="num" type="button" value="." onclick="input('.')"></td>
+            <td><input class="num" type="button" value="←" onclick="rem()"></td>
+            <td><input class="num" type="button" value="/" onclick="input('/')"></td>
+        </tr>
+    </table>
+    <table>    
+        <tr>
+            <td><input class="bsym" type="button" value="=" onclick="eq()" ></td>
+            <td><input class="bsym" type="button" value="CLEAR" onclick="clr()"></td>
+        </tr>
+    </table>
+</div>
+    </form>
+    <script src="LP02.js"></script>
+
+</body>
+</html>
