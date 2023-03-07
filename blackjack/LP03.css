@@ -1,0 +1,84 @@
+body{
+    background-image: url("blackjack.jpg");
+    background-repeat: repeat;
+  background-size: 100%;
+}
+h1{
+    align-content: center;
+    color: white;
+}
+h2{
+    color: rgb(255, 255, 255);
+    align-content: center;
+    animation: blink;
+    animation-iteration-count: infinite;
+}
+.first div{
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+}
+.first{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: black solid .1rem;
+    height: 30rem;
+}
+#you{
+    border-right: black solid 1px;
+}
+.button div{
+    align-content: center;
+}
+img{
+    width: 50%;
+}
+.row{
+    display: flex;
+}
+#sy{
+    color: white;
+    font-weight: bold;
+}
+#sd{
+    color: white;
+    font-weight: bold;
+}
+#HBT{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 3px;
+}
+#FBT{
+    width: 100px;
+    height: 30px;
+    background-color: yellow;
+    font-weight: bold;
+    border-radius: 3px;
+}
+#DBT{
+    width: 100px;
+    height: 30px;
+    background-color: greenyellow;
+    font-weight: bold;
+    border-radius: 3px;
+}
+table{
+    border-style: dotted;
+    border-radius: 2px;
+    border-color: bisque;
+    align-content: center;
+    
+}
+.tabtxt{
+color: white;
+border: 2px;
+}
+#status {
+    background-repeat: space;
+}
