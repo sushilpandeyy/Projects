@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="LP03.css">
+</head>
+<title>
+  BLACKJACK GAME 
+</title>
+<body>
+<center><h1>Welcome To BLACKJACK Game</h1>
+<h2 id="command">Let's Play</h2>
+<h3 id="status">Press Hit For Next Card </h3>
+</center>
+<div class="first">
+<div id="you">
+<h2>YOU🧍 </h2>
+<p id="sy">0</p>
+<div class="row">
+    <div class="column">
+      <img src="" id="0">
+    </div>
+    <div class="column">
+      <img src="" id="1">
+    </div>
+    <div class="column">
+      <img src="" id="2">
+    </div>
+  </div>
+</div>
+<div id="deal">
+<h2>DEALER🧍‍♂️ </h2>
+<p id="sd">0</p>
+
+
+<div class="row">
+    <div class="column">
+      <img src="" id="90">
+    </div>
+    <div class="column">
+      <img src="" id="91">
+    </div>
+    <div class="column">
+      <img src="" id="92">
+    </div>
+  </div>
+</div>
+</div>
+<div class="button">
+ <center><button id="HBT" onclick="hit()">HIT</button>&emsp;&emsp;&emsp;&emsp;<button id="FBT" onclick="fin()">FIN</button>&emsp;&emsp;&emsp;&emsp;
+<button id="DBT" onclick="dea()">DEAL</button></center>
+</div>
+<div class="tabwl">
+  <center><table>
+    <tr>
+        <th><span class="tabtxt" ><center>Total Games</center></span></th>
+        <th><center><span class="tabtxt" ><center>Wins</center></span></th>
+        <th><center><span class="tabtxt" ><center>Losses</center></span></th>
+        <th><center><span class="tabtxt" ><center>Draw</center></span></th>
+
+    </tr>
+    <tr>
+      <td><center><span class="tabtxt" id="total">0</span></center></td>  
+      <td><center><span class="tabtxt" id="wins">0</span></center></td>
+      <td><center><span class="tabtxt" id="losses">0</span></center></td>
+      <td><center><span class="tabtxt" id="draw">0</span></center></td>
+    
+        
+    </tr>
+</table></center>
+</div>
+    <script src="LP03.js"></script>
+
+</body>
+</html>
