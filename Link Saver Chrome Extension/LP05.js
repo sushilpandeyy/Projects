@@ -10,6 +10,9 @@ if(localStorage.getItem('links')){
         cin=url.length
     Show()
 }
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs){   
+     link.value=tabs[0].url
+})
 const inputBtn = document.getElementById("input-btn")
 const delbtn = document.getElementById("del-btn")
 inputBtn.addEventListener("click", function sav(){
