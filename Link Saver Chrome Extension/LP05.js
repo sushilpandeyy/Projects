@@ -2,6 +2,7 @@ url =[]
 activetab="links"                                           //tag for storage
 let cin=url.length;
 let n=0
+openn=0
 
 if(localStorage.getItem('links')){                          //IF URL LIST IS ALREADY SAVED
         localStorage.getItem('links')
@@ -31,11 +32,20 @@ inputBtn.addEventListener("click", function sav(){                         //FUN
     }
    
 })
-function del(){                               //DELETING VALUE
-    localStorage.clear('links')
-    list.innerHTML = ""
-    window.close();
-}
+
+delbtn.addEventListener("click",function del(){                               //DELETING VALUE
+    if(openn==0){
+        delbtn.innerText="Close"
+    document.getElementById("delboxs").style.display="inline"
+    openn=1
+    }
+    else{
+        delbtn.innerText="Delete"
+        document.getElementById("delboxs").style.display="none"
+        
+        openn=0
+    }
+})
 
 function save(){                                                            //SAVING AND SHOWING 
 url[cin]=document.getElementById("link").value;
@@ -49,7 +59,7 @@ function Show(){                                                           //SHO
     let listItems = ""
         for (let i = 0; i < url.length; i++) 
         {
-            if(url[i]=="" || url[i]=="undefined" || url[i]=="NULL"){
+            if(url[i]=="" || url[i]=="undefined" || url[i]=="null" || url[i]==null){
                 continue
             }
             else{
@@ -69,9 +79,15 @@ function Show(){                                                           //SHO
 function addlist(){
     let lis=""
     for(let i=0; i<url.length; i++){
-        let newOption = new Option(url[i],url[i]);    //FIRST IS TEXT AND SECOND IS VALUE
+        if(url[i]==null){
+            continue
+        }
+        else{
+            let newOption = new Option(url[i],url[i]);    //FIRST IS TEXT AND SECOND IS VALUE
         const select = document.querySelector('#select1'); 
         select.add(newOption,undefined);
+        }
+        
     }
      }
     dellinkbtn.addEventListener("click", function droplink(){              //WHEN OPTION IS CLICKED AND ELEMENT IS REQUESTED TO  REMOVE
@@ -80,19 +96,21 @@ function addlist(){
         output = selectElement.value
         console.log(output)
         if(output=='ALL'){
-            del()
+            localStorage.clear('links')
+    list.innerHTML = ""
+    window.close();
         }
         else{
             const index = url.indexOf(output);
             if (index > -1) {
               url.splice(index, 1);
             }
+            save2()
             console.log(url);
-            refresh()
+            
     }
      })
-function refresh(){                                   //ADD ELEMENT IN DROP DOWN LIST
-    document.getElementById("select1").innerHTML = "<option value='ALL' selected>Delete All</option>";
-    save()
-    addlist()
+function save2(){                                                            //WHEN YOU WANT SAVE ARRAY WITHOUT INPUT FIELD
+    localStorage.setItem('links', JSON.stringify(url));
+    Show()
 }

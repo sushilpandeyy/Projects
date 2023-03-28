@@ -17,6 +17,7 @@ button{
 h1{
     font-family: 'Gloock', serif;
 }
+
 .len{ 
     padding: 10px;
 }
@@ -37,16 +38,22 @@ h1{
     padding-right: 2%;
 }
 .droplink{
-    display: flex;
+  display: flex;
 }
 #del-btn-fin{
-    margin-left: auto;
+   align: center;
 }
 select{
     margin-left: auto;
-    padding-left: 2%;
+    width: 400px;
+    
 }
-.delbox{
-    padding-right: 2%;
-    padding-left: 2%;
+.dropdown{
+    display: flex;
+}
+.headdel{
+    display: flex;
+}
+#delboxs{
+    display: none;
 }

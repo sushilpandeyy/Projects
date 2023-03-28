@@ -23,16 +23,21 @@
     <button id="input-btn">Save</button>
     <button id="del-btn">Delete</button>
     </div>
-    <div class="delbox">                                           <!--BUILDING THE DELETE BUTTON-->
+    <div class="delbox" id="delboxs">                                           <!--BUILDING THE DELETE BUTTON-->
+      <div class="headdel">
+        <div class="crosshead">
       <h5>Select The Link To Delete</h5><br>
+    </div>
+    </div>
+    
       <div class="droplink">             
         <div class="dropdown">
           <select name="del-list" value="Select" id="select1">      
             <option value="ALL" selected>Delete All</option>
           </select>
         </div>
+        <div class="dropdown"><button id="del-btn-fin">Delete</button></div>
       </div>
-      <button id="del-btn-fin">Delete</button>
       </div>
     </div>
     <div class="lenl">
